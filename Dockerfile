@@ -9,6 +9,9 @@ RUN deluser --remove-home www-data && \
     addgroup -S -g ${USER_GID} www-data && \
     adduser -u ${USER_UID} -D -S -G www-data www-data
 
+#RUN setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX ./app/cache ./app/logs
+#RUN setfacl -dR -m u:www-data:rwX -m u:`whoami`:rwX ./app/cache ./app/logs
+
 # Necessary tools
 RUN apk add --update --no-cache ${PHPIZE_DEPS} git curl
 

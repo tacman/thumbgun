@@ -9,7 +9,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "ext-imagick": "^3.7",
+        "ext-imagick": "^3.6",
         "aws/aws-sdk-php": "^3.234",
         "symfony/console": "6.1.*",
         "symfony/dotenv": "6.1.*",
@@ -17,12 +17,14 @@
         "symfony/framework-bundle": "6.1.*",
         "symfony/lock": "6.1.*",
         "symfony/mime": "6.1.*",
+        "symfony/monolog-bundle": "^3.8",
         "symfony/runtime": "6.1.*",
         "symfony/yaml": "6.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "psalm/phar": "^4.26",
+        "symfony/maker-bundle": "^1.47",
         "symfony/phpunit-bridge": "^6.1"
     },
     "config": {

@@ -8,3 +8,7 @@ thumbnail_serve:
     methods: [ 'GET' ]
     requirements:
         id: '.+'
+
+controllers:
+    resource: ../src/Controller/
+    type: attribute

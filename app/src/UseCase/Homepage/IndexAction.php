@@ -10,6 +10,9 @@ final class IndexAction
 {
     public function __invoke(): JsonResponse
     {
-        return new JsonResponse(['time' => (new \DateTime())->format(DATE_ATOM)]);
+        return new JsonResponse([
+            'time' => (new \DateTime())->format(DATE_ATOM),
+            'place' => __FILE__
+        ]);
     }
 }
