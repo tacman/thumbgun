@@ -20,15 +20,12 @@ final class ImmutableImage implements ImageInterface
     /** @var non-empty-string */
     private readonly string $requestedFormat;
 
-    /** @var Closure():string */
-    private readonly Closure $source;
-
     /**
      * @param Closure():string $source
      *
      * @throws ImageException
      */
-    public function __construct(string $imageId, string $requestedFormat, Closure $source)
+    public function __construct(string $imageId, string $requestedFormat, private readonly Closure $source)
     {
         if (empty($imageId) || self::containsDangerousSymbols($imageId)) {
             throw new ImageException('Image id empty');
@@ -40,7 +37,6 @@ final class ImmutableImage implements ImageInterface
 
         $this->imageId = $imageId;
         $this->requestedFormat = $requestedFormat;
-        $this->source = $source;
     }
 
     private static function containsDangerousSymbols(string $imageId): bool

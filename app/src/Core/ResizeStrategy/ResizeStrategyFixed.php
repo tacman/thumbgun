@@ -15,7 +15,7 @@ final class ResizeStrategyFixed implements ResizeStrategyInterface
             throw new \InvalidArgumentException(\sprintf(
                 'Expected %s got %s',
                 SizeRectangle::class,
-                \get_class($size),
+                $size::class,
             ));
         }
 

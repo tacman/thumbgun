@@ -11,13 +11,8 @@ use Psr\Http\Message\StreamInterface;
 
 final class AWSS3ImageSource implements ImageSourceInterface
 {
-    private S3Client $s3Client;
-    private string $s3Bucket;
-
-    public function __construct(S3Client $s3Client, string $s3Bucket)
+    public function __construct(private readonly S3Client $s3Client, private readonly string $s3Bucket)
     {
-        $this->s3Client = $s3Client;
-        $this->s3Bucket = $s3Bucket;
     }
 
     /** {@inheritDoc} */

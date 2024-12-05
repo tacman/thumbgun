@@ -9,11 +9,8 @@ namespace App\Core\Security;
  */
 final class ImmutableKey implements KeyInterface
 {
-    private string $key;
-
-    public function __construct(string $key)
+    public function __construct(private readonly string $key)
     {
-        $this->key = $key;
     }
 
     public function __toString(): string

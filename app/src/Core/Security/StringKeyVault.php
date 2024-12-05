@@ -9,11 +9,8 @@ use Traversable;
 /** {@inheritDoc} */
 final class StringKeyVault implements KeyVaultInterface
 {
-    private readonly string $keys;
-
-    public function __construct(string $keys)
+    public function __construct(private readonly string $keys)
     {
-        $this->keys = $keys;
     }
 
     /** {@inheritDoc} */

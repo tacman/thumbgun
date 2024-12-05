@@ -21,9 +21,7 @@ final class TestImageSource implements ImageSourceInterface
             throw $this->exception;
         }
 
-        return new ImmutableImage($imageId, $imageFormat, function (): string {
-            return \file_get_contents(__DIR__ . '/tiny.jpg');
-        });
+        return new ImmutableImage($imageId, $imageFormat, fn(): string => \file_get_contents(__DIR__ . '/tiny.jpg'));
     }
 
     public function setThrownException(?\Throwable $exception): void

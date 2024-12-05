@@ -24,3 +24,7 @@
 ###> psalm/phar ###
 /psalm.xml
 ###< psalm/phar ###
+
+###> phpstan/phpstan ###
+phpstan.neon
+###< phpstan/phpstan ###
