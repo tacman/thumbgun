@@ -1,5 +1,5 @@
 FROM composer:2 as composer
-FROM php:8.1-fpm-alpine as base
+FROM php:8.3-fpm-alpine as base
 
 ARG USER_UID=82
 ARG USER_GID=82
